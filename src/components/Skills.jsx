@@ -1,5 +1,5 @@
 import React from 'react';
-import {  HStack, Text, VStack, Image } from '@chakra-ui/react';
+import {  HStack, Text, VStack, Image, Box } from '@chakra-ui/react';
 
 const skillsData = [
   { id: 1, name: 'Figma', imageSrc: 'figma.png' },
@@ -18,13 +18,16 @@ export default function Skills() {
     <HStack fontFamily="
 Poppins" spacing="32" w="100%" paddingLeft={["1.4rem","6rem"]} pt="1.4rem" pb="1.4rem" border="1px solid #D9D9D9">
       {/* Skills Required Section */}
-      <VStack  alignItems="flex-start" spacing="4">
+      <VStack  alignItems="flex-start" spacing="4" pt="12px">
         <Text fontSize="14px" color="#6E6D6D">Skills Required</Text>
         <VStack align="stretch" spacing="2">
           {skillsData.map((skill) => (
             <HStack key={skill.id} spacing="2">
-              <Image boxSize="16px" src={skill.imageSrc} alt={skill.name} />
+             <Box p="2px" display="flex" flexDirection="row" boxShadow=" 0px 4px 4px 0px #00000014 inset
+" borderRadius="3px" border=" 1px solid var(--Colors-Border-border-primary, #D0D5DD)" alignItems="center" justifyContent="center" gap="6px">
+               <Image boxSize="16px" src={skill.imageSrc} alt={skill.name} />
               <Text fontSize="14px">{skill.name}</Text>
+             </Box>
             </HStack>
           ))}
         </VStack>
@@ -36,7 +39,7 @@ Poppins" spacing="32" w="100%" paddingLeft={["1.4rem","6rem"]} pt="1.4rem" pb="1
        
         <HStack align="stretch" spacing="32" alignItems="flex-start">
           {req.map((requirement) => (
-           <VStack alignItems="flex-start" pb="3.8rem">
+           <VStack alignItems="flex-start" pb="3.9rem">
   <Text  fontSize="14px" color="#6E6D6D" key={requirement.id}>{`${requirement.name}`}</Text>
   <Text key={requirement.id}>{`${requirement.skills}`}</Text>
            </VStack>
