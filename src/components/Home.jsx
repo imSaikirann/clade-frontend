@@ -33,11 +33,11 @@ export default function Home() {
   return (
     <>
       <VStack fontFamily="" spacing="0">
-        <Box display="flex" flexDirection="column" paddingLeft="6rem" w="100%" pt="1.4rem" pb="1.4rem" gap="24px" border="1px solid #E7E7E7">
+        <Box display="flex" flexDirection="column" paddingLeft={["1.2rem","6rem"]} w="100%" pt="1.4rem" pb="1.4rem" gap="24px" border="1px solid #E7E7E7">
 
-          <HStack spacing="20px" >
+          <HStack spacing="20px"  >
             <Box>
-              <Text fontSize="36px" fontWeight="700">Senior Product Designer</Text>
+              <Text fontSize={["24px","36px"]} fontWeight="700">Senior Product Designer</Text>
             </Box>
             <Box>
               <Text fontSize="14px" color="#888888" fontWeight="400" > • posted 2 days ago</Text>
@@ -52,7 +52,7 @@ export default function Home() {
               <Box key={location.id}>
                 <HStack color="#5D5D5D" spacing="12px">
                   {location.svg}
-                  <Text fontSize="20px" >{location.name}</Text>
+                  <Text fontSize= {["16px","20px"]} >{location.name}</Text>
                   {index !== locations.length - 1 && <Text> • </Text>}
                 </HStack>
               </Box>

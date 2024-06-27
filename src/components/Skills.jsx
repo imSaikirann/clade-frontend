@@ -16,7 +16,7 @@ const req = [
 export default function Skills() {
   return (
     <HStack fontFamily="
-Poppins" spacing="32" w="100%" paddingLeft="6rem" pt="1.4rem" pb="1.4rem" border="1px solid #D9D9D9">
+Poppins" spacing="32" w="100%" paddingLeft={["1.4rem","6rem"]} pt="1.4rem" pb="1.4rem" border="1px solid #D9D9D9">
       {/* Skills Required Section */}
       <VStack  alignItems="flex-start" spacing="4">
         <Text fontSize="14px" color="#6E6D6D">Skills Required</Text>
