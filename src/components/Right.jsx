@@ -46,7 +46,8 @@ export default function Right() {
     ];
 
     return (
-        <Box>
+        <Box fontFamily='
+Poppins'>
             <VStack bgColor="#FCFCFC" border="1px, 1px, 0px, 0px solid #E7E7E7" p="1.4rem" h="100%">
                 <HStack>
                     <Button variant='outline' border="0.8px solid #DC4A2D" w="172px" h="48px" bgColor="#FEF4F2" color="#DC4A2D" gap="5px">
@@ -106,6 +107,7 @@ export default function Right() {
                     border="1px solid #F7F7F7"
                     borderRadius="12px"
                     boxShadow="-4px 8px 20px 0px #0000001A"
+                    mt="2rem"
                   
                 >
                     <VStack spacing="18px" alignItems="flex-start"   >

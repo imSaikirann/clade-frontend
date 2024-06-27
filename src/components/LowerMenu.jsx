@@ -2,55 +2,52 @@ import React from 'react';
 import { Box, HStack, Link, Text } from '@chakra-ui/react';
 
 const menuItems = [
-  { type: 'link', text: 'Job preview', href: '#' },
-  { type: 'link', text: 'Applicants', href: '#' },
-  { type: 'link', text: 'Match', href: '#' },
-  { type: 'text', text: 'Messages' },
+  { text: 'Job preview', href: '#' },
+  { text: 'Applicants', href: '#' },
+  { text: 'Match', href: '#' },
+  { text: 'Messages', href: '#' },
+
 ];
 
 export default function LowerMenu() {
   return (
-    <Box w='100%' h="71px" display="flex" flexDirection="row" alignItems='center' justifyContent="flex-start" paddingLeft="6rem" border="1px solid #D9D9D9">
-      <HStack spacing="24px">
+    <Box
+      fontFamily="Poppins"
+      w='100%'
+      h="71px"
+      display="flex"
+      flexDirection="row"
+      alignItems='center'
+      justifyContent="flex-start"
+      paddingLeft="6rem"
+      border="1px solid #D9D9D9"
+    >
+      <HStack spacing="36px">
         {menuItems.map((item, index) => (
-          item.type === 'link' ? (
-            <MenuItem key={index} href={item.href} h="71px">{item.text}</MenuItem>
-          ) : (
-            <TextItem key={index} h="71px">{item.text}</TextItem>
-          )
+          <MenuItem key={index} href={item.href} text={item.text} />
         ))}
       </HStack>
     </Box>
   );
 }
 
-function MenuItem({ href, children }) {
+function MenuItem({ href, text }) {
   return (
     <Link
       href={href}
-      borderBottom="2px solid transparent" // Start with a transparent border
+      color="#888888"
+      borderBottom="5px solid transparent"
       _hover={{
-        borderBottom: '2px solid orange', // Change to orange on hover
-        paddingBottom: '2px', // Padding for space under the border
+        borderBottom: '2px solid orange',
+        paddingBottom: '2px',
+        color:" #DC4A2D"
       }}
       _focus={{
-        outline: 'none', // Remove outline on focus
+        outline: 'none',
+         color:" #DC4A2D"
       }}
     >
-      {children}
+      <Text lineHeight="71px">{text}</Text>
     </Link>
-  );
-}
-
-function TextItem({ children }) {
-  return (
-    <Text
-      _hover={{
-        borderBottom: '2px solid orange', // Change to orange on hover
-        paddingBottom: '2px', // Padding for space under the border
-      }}
-    >
-      {children}
-    </Text>
   );
 }

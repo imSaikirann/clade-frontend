@@ -7,9 +7,10 @@ const navItems = [
         label: "Messages",
         icon: (
             <svg width="24" height="25" viewBox="0 0 24 25" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <path d="M3 8.04475C3 6.36459 3 5.52451 3.32698 4.88278C3.6146 4.31829 4.07354 3.85935 4.63803 3.57173C5.27976 3.24475 6.11984 3.24475 7.8 3.24475H16.2C17.8802 3.24475 18.7202 3.24475 19.362 3.57173C19.9265 3.85935 20.3854 4.31829 20.673 4.88278C21 5.52451 21 6.36459 21 8.04475V13.4448C21 15.1249 21 15.965 20.673 16.6067C20.3854 17.1712 19.9265 17.6302 19.362 17.9178C18.7202 18.2448 17.8802 18.2448 16.2 18.2448H9.68375C9.0597 18.2448 8.74767 18.2448 8.44921 18.306C8.18443 18.3603 7.9282 18.4502 7.68749 18.5732C7.41617 18.7118 7.17252 18.9067 6.68521 19.2966L4.29976 21.2049C3.88367 21.5378 3.67563 21.7043 3.50054 21.7044C3.34827 21.7046 3.20422 21.6354 3.10923 21.5164C3 21.3795 3 21.1131 3 20.5803V8.04475Z" stroke="#B0B0B0" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                <path d="M3 8.04475C3 6.36459 3 5.52451 3.32698 4.88278C3.6146 4.31829 4.07354 3.85935 4.63803 3.57173C5.27976 3.24475 6.11984 3.24475 7.8 3.24475H16.2C17.8802 3.24475 18.7202 3.24475 19.362 3.57173C19.9265 3.85935 20.3854 4.31829 20.673 4.88278C21 5.52451 21 6.36459 21 8.04475V13.4448C21 15.1249 21 15.965 20.673 16.6067C20.3854 17.1712 19.9265 17.6302 19.362 17.9178C18.7202 18.2448 17.8802 18.2448 16.2 18.2448H9.68375C9.0597 18.2448 8.74767 18.2448 8.44921 18.306C8.18443 18.3603 7.9282 18.4502 7.68749 18.5732C7.41617 18.7118 7.17252 18.9067 6.68521 19.2966L4.29976 21.2049C3.88367 21.5378 3.67563 21.7043 3.50054 21.7044C3.34827 21.7046 3.20422 21.6354 3.10923 21.5164C3 21.3795 3 21.1131 3 20.5803V8.04475Z" stroke="#B0B0B0" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
             </svg>
-        )
+        ),
+        hasNotification: true
     },
     {
         href: "#paymnets",
@@ -36,24 +37,25 @@ const navItems = [
 export default function Navbar() {
     return (
 
-        <HStack spacing={8} display="flex" boxShadow=" 0px 4px 4px 0px rgba(217, 217, 217, 0.1)"  flexDirection="row" alignItems="center" p={["16px","32px"]} h={["80px","100px"]} justifyContent="space-between">
+        <HStack fontFamily="
+Poppins" spacing={8} display="flex" boxShadow=" 0px 4px 4px 0px rgba(217, 217, 217, 0.1)" flexDirection="row" alignItems="center" p={["16px", "32px"]} h={["80px", "100px"]} justifyContent="space-between">
 
             <Box
-                width={["90px","100px"]}
-                height={["35px","65px"]}
+                width={["90px", "100px"]}
+                height={["35px", "65px"]}
                 bgColor='#E7E7E7'
                 display='flex'
                 alignItems='center'
                 justifyContent='center'
-                p={["24px","6px"]}
+                p={["24px", "6px"]}
             >
-                <Text color='#DC4A2D' fontSize={['16px','20px']} fontWeight={['500','700']}>
+                <Text color='#DC4A2D' fontSize={['16px', '20px']} fontWeight={['500', '700']}>
                     Logo
                 </Text>
             </Box>
 
             <Box display="flex" flexDirection="row" alignItems='center' >
-                <Box marginRight="12px" bgColor="#DC4A2D" display="flex" alignItems="center" justifyContent="center" border="2px solid #FCB4A5" borderRadius="49px" w="109px" h="58px" >
+                <Box marginRight="12px" bgColor="#DC4A2D" display="flex" alignItems="center" justifyContent="center"  boxShadow=" 0px 4px 4px 0px rgba(0, 0, 0, 0.25)" border=" 2px solid rgba(252, 180, 165, 1)" borderRadius="49px" w="109px" h="58px" >
                     <Link  >
                         <HStack color="white" >
                             <svg width="24" height="25" viewBox="0 0 24 25" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -64,13 +66,16 @@ export default function Navbar() {
                         </HStack>
                     </Link>
                 </Box>
-                <HStack spacing={12} boxShadow="0px 4px 4px 0px #00000040 inset" border=" 0.5px solid rgba(209, 209, 209, 1)" bgColor="#FFFFFF" p="1rem 0.8rem" borderRadius="36px" >
+                <HStack spacing="8" p="16px" border=" 0.5px solid #D1D1D1" w="100%" h="56px" borderRadius="50px" boxShadow=" 0px 4px 4px 0px #00000040 inset
+">
                     {navItems.map((item, index) => (
-                        <Link key={index} href={item.href} >
-                            <HStack >
-                                {item.icon}
-                                <Text fontSize="16px" color="#B0B0B0">{item.label}</Text>
-                            </HStack>
+                        <Link key={item.id} href={item.href} display="flex" alignItems="center" color="gray.500" position="relative" _hover={{ color: 'gray.700' }}>
+                            {item.icon}
+                            {item.hasNotification && (
+                                <Box position="absolute" top="-2px" right="87px" w="6px" h="6px" bgColor="red.500" borderRadius="50%"></Box>
+                            )}
+                            <Text ml="2" fontWeight="medium">{item.label}</Text>
+
                         </Link>
                     ))}
                 </HStack>
@@ -78,11 +83,12 @@ export default function Navbar() {
             <Box display="flex" flexDirection="row" alignItems='center' >
                 <Box marginRight="12px" p="0.7rem" borderRadius="36px" >
 
-                    <HStack fontSize="24px" color="white" spacing='12px' >
+                    <HStack fontSize="24px" color="white" spacing='18px' >
                         <Box>
                             <svg width="22" height="24" viewBox="0 0 26 28" fill="none" xmlns="http://www.w3.org/2000/svg">
                                 <path d="M15.6666 26.5723H10.3333M20.9999 9.23895C20.9999 7.11722 20.1571 5.08239 18.6568 3.5821C17.1565 2.08181 15.1217 1.23895 12.9999 1.23895C10.8782 1.23895 8.84338 2.08181 7.34309 3.5821C5.8428 5.08239 4.99994 7.11722 4.99994 9.23895C4.99994 13.3592 3.96057 16.1802 2.7995 18.0462C1.82011 19.6201 1.33042 20.4071 1.34838 20.6266C1.36826 20.8697 1.41976 20.9624 1.61564 21.1077C1.79256 21.239 2.59006 21.239 4.18508 21.239H21.8148C23.4098 21.239 24.2073 21.239 24.3842 21.1077C24.5801 20.9624 24.6316 20.8697 24.6515 20.6266C24.6695 20.4071 24.1798 19.6201 23.2004 18.0462C22.0393 16.1802 20.9999 13.3592 20.9999 9.23895Z" stroke="black" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
                             </svg>
+                            <Box position="absolute" top="35px" right="144px" w="6px" h="6px" bgColor="red.500" borderRadius="50%"></Box>
                         </Box>
                         <Image borderRadius="50px" src="image.png " w="40px" h="40px"></Image>
                         <Box>

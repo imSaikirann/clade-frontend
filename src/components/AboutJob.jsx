@@ -26,7 +26,8 @@ const supplementalPayTypes = [
 
 export default function AboutJob() {
   return (
-    <VStack w="100%" align="flex-start" spacing="4" pt="1.4rem" pb="1.4rem" pl="6rem" border="1px solid #D9D9D9">
+    <VStack fontFamily="
+Poppins" w="100%" align="flex-start" spacing="4" pt="1.4rem" pb="1.4rem" pl="6rem" border="1px solid #D9D9D9">
       {/* Job Details */}
       <Box display="flex" flexDirection="column" alignItems="flex-start">
         <Text fontSize="14px" fontWeight="400" lineHeight="21px" marginBottom="4px" color="#6E6D6D">About the Job</Text>

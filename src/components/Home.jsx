@@ -32,7 +32,8 @@ export default function Home() {
   ];
   return (
     <>
-      <VStack spacing="0">
+      <VStack fontFamily="
+Poppins" spacing="0">
         <Box display="flex" flexDirection="column" paddingLeft="6rem" w="100%" pt="1.4rem" pb="1.4rem" gap="24px" border="1px solid #E7E7E7">
 
           <HStack spacing="20px" >
@@ -40,10 +41,11 @@ export default function Home() {
               <Text fontSize="36px" fontWeight="700">Senior Product Designer</Text>
             </Box>
             <Box>
-              <Text fontSize="14px" color="#888888" fontWeight="700"> • posted 2 days ago</Text>
+              <Text fontSize="14px" color="#888888" fontWeight="400" > • posted 2 days ago</Text>
             </Box>
             <Box>
-              <Button borderRadius="50px" color="green" bgColor="#ABEFC6"><Text mr="7px" >• </Text>open</Button>
+              <Button border=" 1px solid var(--Component-colors-Utility-Success-utility-success-200, rgba(171, 239, 198, 1))" borderRadius="50px" color="green" 
+><Text mr="7px" fontSize="26px" fontWeight="400" >•</Text>Open</Button>
             </Box>
           </HStack>
           <HStack>

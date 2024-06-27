@@ -34,7 +34,8 @@ export default function Footer() {
   ];
 
   return (
-    <Box w="100%" h="350px" color="#FFFFFF" border=" 1px solid #E7E7E7" paddingLeft="6rem" pt="1.4rem" spacing="20px">
+    <Box fontFamily='
+Poppins' w="100%" h="350px" color="#FFFFFF" border=" 1px solid #E7E7E7" paddingLeft="6rem" pt="1.4rem" spacing="20px">
 
       <HStack color="#4F4F4F" spacing="10px">
         <Image src="image.png" w="40px" h="40px" />

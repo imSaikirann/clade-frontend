@@ -10,7 +10,7 @@ import Layout from './components/Layout';
 function App() {
   return (
     <ChakraProvider>
-      <div className="App" w="1728px">
+      <div className="App" w="1728px" >
         <Navbar/>
         <LowerMenu/>
        <Layout/>
