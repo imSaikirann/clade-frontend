@@ -66,7 +66,7 @@ Poppins" spacing={8} display="flex" boxShadow=" 0px 4px 4px 0px rgba(217, 217, 2
                         </HStack>
                     </Link>
                 </Box>
-                <HStack spacing="8" p="16px" border=" 0.5px solid #D1D1D1" w="100%" h="56px" borderRadius="50px" boxShadow=" 0px 4px 4px 0px #00000040 inset
+                <HStack spacing="8" p="16px" border=" 0.5px solid #D1D1D1" w="100%" h="64px" borderRadius="50px" boxShadow=" 0px 4px 4px 0px #00000040 inset
 ">
                     {navItems.map((item, index) => (
                         <Link key={item.id} href={item.href} display="flex" alignItems="center" color="gray.500" position="relative" _hover={{ color: 'gray.700' }}>

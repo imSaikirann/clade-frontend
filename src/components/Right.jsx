@@ -69,7 +69,7 @@ Poppins'>
                     </Button>
                 </HStack>
 
-                <VStack spacing={4} w="100%">
+                <VStack spacing={4} w="100%" mt="1.4rem">
                     {applicants.map((applicant, index) => (
                         <>
                             <Box

@@ -32,8 +32,7 @@ export default function Home() {
   ];
   return (
     <>
-      <VStack fontFamily="
-Poppins" spacing="0">
+      <VStack fontFamily="" spacing="0">
         <Box display="flex" flexDirection="column" paddingLeft="6rem" w="100%" pt="1.4rem" pb="1.4rem" gap="24px" border="1px solid #E7E7E7">
 
           <HStack spacing="20px" >

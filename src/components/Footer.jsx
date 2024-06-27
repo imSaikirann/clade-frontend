@@ -48,7 +48,7 @@ Poppins' w="100%" h="350px" color="#FFFFFF" border=" 1px solid #E7E7E7" paddingL
         <VStack color="black" display="flex" alignItems="flex-start" textAlign="left" justifyContent="left">
           {companyInfo.map((item, index) => (
             <Box key={index} spacing="12px">
-              <Text>{item.title}</Text>
+              <Text color="#6E6D6D">{item.title}</Text>
               <Text>{item.value}</Text>
             </Box>
           ))}
@@ -57,7 +57,7 @@ Poppins' w="100%" h="350px" color="#FFFFFF" border=" 1px solid #E7E7E7" paddingL
         <VStack color="black" display="flex" alignItems="flex-start" textAlign="left" justifyContent="left">
           {companyInfo1.map((item, index) => (
             <Box key={index}>
-              <Text>{item.title}</Text>
+              <Text color="#6E6D6D">{item.title}</Text>
               <Text>{item.value}</Text>
             </Box>
           ))}
